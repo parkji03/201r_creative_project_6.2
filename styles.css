@@ -1,0 +1,207 @@
+div.form-container{
+  display: inline-block;
+  border: 4px ridge #336699;
+  width: 400px;
+  border-radius:10px;
+  margin:10px;
+}
+p.form-header{
+  margin:0px;
+  font: 24px bold;
+  color: white;  
+  background: #336699;
+  text-align: center;
+}
+form{
+  margin:10px;
+}
+label{ 
+  width:80px; 
+  display: inline-block;
+}
+input{
+  border: 3px ridge #336699;
+  border-radius:5px;
+  padding:3px;
+}
+
+input[type=submit]{
+  font: 18px bold;
+  width: 120px;
+  color:white;  background: #336699;
+  margin-top:15px;
+  }
+
+input[type=button]{
+  font: 18px bold;
+  width: 120px;
+  color:white;  background: #336699;
+  margin-top:15px; 
+}
+
+body {
+  background-color: gray;
+  background-image: url("background-photo.jpg");
+}
+
+
+div#loginStyle {
+  margin-top: 10%;
+  text-align: center;
+}
+
+h1#welcomeStyle {
+  font-size: 50px;
+  color: black;
+}
+
+div#msgStyle {
+  margin-top: 15px;
+  text-align: center;
+}
+
+div#indexStyle {
+  text-align: center;
+  margin-top: 10%;
+}
+
+h2 {
+  color: white;
+}
+
+div#userStyle {
+  text-align: center;
+  margin-top: 10%;
+}
+
+h1 {
+  color: white;
+}
+
+/*body {
+  background-color: #33ccff;
+  font-family: helvetica;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0px 2px black;
+}
+*/
+.typebutton
+{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.typebutton:active
+{
+  background-color: red;
+}
+
+.typekeys
+{
+  text-align: center;
+}
+
+.whitekeys {
+  background-color: white;
+  border: none;
+  padding: 48px 20px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: black;
+  font-size: 30px;
+}
+
+.blackkeys 
+{
+  background-color: black;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+
+.blackkeys:active
+{
+  background-color: black;
+}
+
+.whitekeys:active
+{
+  background-color: black;
+}
+
+.spacer
+{
+  border: 0px;
+  background-color: transparent;
+  padding: 20px 10px;
+}
+
+.spacer2
+{
+  border: 0px;
+  background-color: transparent;
+  padding: 20px 20px;
+}
+
+.piano{
+  text-align: center;
+  font-size: 5px;
+}
+
+
+./*switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}*/
+
+.switch input {display:none;}
+
+/*.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #11aadd;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+*/
+/*input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}*/

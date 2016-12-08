@@ -1,0 +1,245 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>User Login and Sessions</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+  <script>
+    var audioCtx = new (window.AudioContext)();
+
+    var type = "square";
+    function playNote(pitch)
+    {
+      var oscillator = audioCtx.createOscillator();
+
+      oscillator.type = type;
+      oscillator.connect(audioCtx.destination);
+      oscillator.frequency.value = pitch;
+
+      oscillator.start();
+      oscillator.stop(audioCtx.currentTime + .2);
+      delete oscillator;
+
+    };
+  </script>
+</head>
+<body>
+  <div id="indexStyle">
+    <div ng-controller="myController">
+      <h2>Hello, "<%= username %>"!</h2>
+
+      <hr>
+      <a href="/logout"><input type="button" value="Logout"/></a>
+      <a href="/user"><input type="button" value="Edit User"/></a>
+      
+    </div>
+  </p>
+  <hr>
+  <h1>Color: <%= color %></h1>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/static/js/my_app.js"></script>
+
+  <div class="piano">
+
+    <button class="spacer"></button>
+    <button onmousedown="playNote(138.59)" class="blackkeys" id="b1">w</button>
+    <button onmousedown="playNote(155.56)" class="blackkeys" id="b2">e</button>
+    <button class="spacer2"></button>
+    <button onmousedown="playNote(185.00)" class="blackkeys" id="b3">t</button>
+    <button onmousedown="playNote(207.65)" class="blackkeys" id="b4">y</button>
+    <button onmousedown="playNote(233.08)" class="blackkeys" id="b5">u</button>
+    <button class="spacer2"></button>
+
+    <button onmousedown="playNote(277.18)" class="blackkeys" id="b6">o</button>
+    <button onmousedown="playNote(311.13)" class="blackkeys" id="b7">p</button>
+    <button class="spacer2"></button>
+    <p>
+
+      <button onmousedown="playNote(130.81)" class="whitekeys" id="w1">a</button>
+      <button onmousedown="playNote(146.83)" class="whitekeys" id="w2">s</button>
+      <button onmousedown="playNote(164.81)" class="whitekeys" id="w3">d</button>
+      <button onmousedown="playNote(174.61)" class="whitekeys" id="w4">f</button>
+      <button onmousedown="playNote(196.00)" class="whitekeys" id="w5">g</button>
+      <button onmousedown="playNote(220.00)" class="whitekeys" id="w6">h</button>
+      <button onmousedown="playNote(246.94)" class="whitekeys" id="w7">j</button>
+
+      <button onmousedown="playNote(261.63)" class="whitekeys" id="w8">k</button>
+      <button onmousedown="playNote(293.66)" class="whitekeys" id="w9">l</button>
+      <button onmousedown="playNote(329.63)" class="whitekeys" id="w10">;</button>
+      <button onmousedown="playNote(349.23)" class="whitekeys" id="w11">'</button>
+
+    </div>
+
+    <script>
+      $('body').keypress(function(e) {
+
+        // alert(e.which);
+        //black keys
+        if(e.which == 119){
+          playNote(138.59);
+          $("#b1").css('background-color','white')
+        }
+        if(e.which == 101){
+          playNote(155.56);
+          $("#b2").css('background-color','white')
+
+        }
+        if(e.which == 116){
+          playNote(185.00);
+          $("#b3").css('background-color','white')
+
+        }
+        if(e.which == 121){
+          playNote(207.65);
+          $("#b4").css('background-color','white')
+
+        }
+        if(e.which == 117){
+          playNote(233.08);
+          $("#b5").css('background-color','white')
+
+        }
+        if(e.which == 111){
+          playNote(277.18);
+          $("#b6").css('background-color','white')
+        }
+        if(e.which == 112){
+          playNote(311.13);
+          $("#b7").css('background-color','white')
+        }
+
+
+        //white keys
+        if(e.which == 97){
+          playNote(130.81);
+          $("#w1").css('background-color','black')
+        }
+        if(e.which == 115){
+          playNote(146.83);
+          $("#w2").css('background-color','black')
+        }
+        if(e.which == 100){
+          playNote(164.81);
+          $("#w3").css('background-color','black')
+        }
+        if(e.which == 102){
+          playNote(174.81);
+          $("#w4").css('background-color','black')
+        }
+        if(e.which == 103){
+          playNote(196.00);
+          $("#w5").css('background-color','black')
+        }
+        if(e.which == 104){
+          playNote(220.00);
+          $("#w6").css('background-color','black')
+        }
+        if(e.which == 106){
+          playNote(246.94);
+          $("#w7").css('background-color','black')
+        }
+        if(e.which == 107){
+          playNote(261.63);
+          $("#w8").css('background-color','black')
+        }
+        if(e.which == 108){
+          playNote(293.66);
+          $("#w9").css('background-color','black')
+        }
+        if(e.which == 59){
+          playNote(329.63);
+          $("#w10").css('background-color','black')
+        }
+        if(e.which == 39){
+          playNote(349.23);
+          $("#w11").css('background-color','black')
+        }
+      });
+
+
+      $('body').keyup(function(e){
+        // alert(e.which);
+        //black keys
+        if(e.which == 87){
+          // playNote(138.59);
+          $("#b1").css('background-color','black')
+        }
+        if(e.which == 69){
+          // playNote(155.56);
+          $("#b2").css('background-color','black')
+
+        }
+        if(e.which == 84){
+          // playNote(185.00);
+          $("#b3").css('background-color','black')
+
+        }
+        if(e.which == 89){
+          // playNote(207.65);
+          $("#b4").css('background-color','black')
+
+        }
+        if(e.which == 85){
+          // playNote(233.08);
+          $("#b5").css('background-color','black')
+
+        }
+        if(e.which == 79){
+          // playNote(277.18);
+          $("#b6").css('background-color','black')
+        }
+        if(e.which == 80){
+          // playNote(311.13);
+          $("#b7").css('background-color','black')
+        }
+
+
+        //white keys
+        if(e.which == 65){
+          // playNote(130.81);
+          $("#w1").css('background-color','white')
+        }
+        if(e.which == 83){
+          // playNote(146.83);
+          $("#w2").css('background-color','white')
+        }
+        if(e.which == 68){
+          // playNote(164.81);
+          $("#w3").css('background-color','white')
+        }
+        if(e.which == 70){
+          // playNote(174.81);
+          $("#w4").css('background-color','white')
+        }
+        if(e.which == 71){
+          // playNote(196.00);
+          $("#w5").css('background-color','white')
+        }
+        if(e.which == 72){
+          // playNote(220.00);
+          $("#w6").css('background-color','white')
+        }
+        if(e.which == 74){
+          // playNote(246.94);
+          $("#w7").css('background-color','white')
+        }
+        if(e.which == 75){
+          // playNote(261.63);
+          $("#w8").css('background-color','white')
+        }
+        if(e.which == 76){
+          // playNote(293.66);
+          $("#w9").css('background-color','white')
+        }
+        if(e.which == 186){
+          // playNote(329.63);
+          $("#w10").css('background-color','white')
+        }
+        if(e.which == 222){
+          // playNote(349.23);
+          $("#w11").css('background-color','white')
+        }
+      });
+    </script>
+  </body>
+  </html>
